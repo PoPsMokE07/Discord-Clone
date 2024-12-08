@@ -23,13 +23,13 @@ import {  User2Icon } from "lucide-react";
 import Link from "next/link";
 import { NewDirectMessage } from "./new-direct-message";
 import { usePathname } from "next/navigation";
-const useTestUsers = () => {
-  const user = useQuery(api.functions.user.get); // get current user
-  if (!user) {
-    return [];
-  }
-  return [user, user, user, user];
-};
+// const useTestUsers = () => {
+//   const user = useQuery(api.functions.user.get); // get current user
+//   if (!user) {
+//     return [];
+//   }
+//   return [user, user, user, user];
+// };
 export function DMSidebar() {
   const user = useQuery(api.functions.user.get);
   const directMessages = useQuery(api.functions.dm.list);

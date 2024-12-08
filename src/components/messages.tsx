@@ -79,7 +79,7 @@ function TypingIndicator({ id }: { id: Id<"directMessages" | "channels"> }) {
   if (!usernames || usernames.length === 0) {
     return null;
   }
-  var typingText = usernames.length > 1 ? "are" : "is";
+  const typingText = usernames.length > 1 ? "are" : "is";
   return (
     <div className="text-sm text-muted-foreground px-4 py-2">
       {usernames.join(", ")} {typingText} typing...
